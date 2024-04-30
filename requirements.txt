@@ -1,0 +1,9 @@
+langchain-groq
+duckduckgo-search
+langchain-community
+tiktoken
+langchainhub
+langchain
+langgraph
+tavily-python
+python-dotenv
