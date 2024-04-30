@@ -2,6 +2,8 @@
 
 Email Reply System AI Agent streamlines email management by automating repetitive tasks, prioritizing incoming messages, and providing intelligent responses, ultimately saving users time and enhancing productivity.
 
+![alt text](https://i.ytimg.com/vi/fKMHKlO-sE4/sddefault.jpg)
+
 ---
 
 ## Notes: This step is very import:
