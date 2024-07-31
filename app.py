@@ -3,7 +3,7 @@ from src.build_graph import app
 
 st.title("Email Reply System")
 
-EMAIL = st.text_area(
+email = st.text_area(
     label="Enter the Email",
     placeholder="""Hi, Bhavik!
 
@@ -17,14 +17,16 @@ The Bhavik Team
 )
 
 # run the agent
-inputs = {"initial_email": EMAIL,"research_info": None, "num_steps":0}
-for output in app.stream(inputs):
-    for key, value in output.items():
-        print(f"Finished running: {key}:")
+inputs = {"initial_email": email,"research_info": None, "num_steps":0}
 
+def run():
+    if st.button("Email Reply"):
+        for output in app.stream(inputs):
+            for key, value in output.items():
+                print(f"Finished running: {key}:")
 
-output = app.invoke(inputs)
+        output = app.invoke(inputs)
+        st.write(output['final_email'])
 
-
-if st.button("Email Reply"):
-    st.write(output['final_email'])
+if __name__ == "__main__":
+    run()
