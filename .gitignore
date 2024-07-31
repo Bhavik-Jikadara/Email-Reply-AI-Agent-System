@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Notebook folder remove
+notebook/
+
 # Distribution / packaging
 .Python
 build/
