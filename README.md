@@ -1,53 +1,77 @@
-# Email Reply AI Agent System
+# Email Response Generator
 
-Email Reply System AI Agent streamlines email management by automating repetitive tasks, prioritizing incoming messages, and providing intelligent responses, ultimately saving users time and enhancing productivity.
+A Streamlit application that automatically processes and generates responses to customer emails using AI. The app uses [LangChain](https://python.langchain.com/) and [Groq](https://groq.com/) for natural language processing and understanding.
 
-<div align="center"><img src="https://i.ytimg.com/vi/fKMHKlO-sE4/sddefault.jpg"></div>
+## Key Features
 
----
+- **Email Categorization**: Automatically categorizes emails into specific categories like price inquiries, customer complaints, product inquiries, customer feedback, and off-topic emails.
+- **Automatic Research**: Performs web searches for complex queries or specific product details using the Tavily API.
+- **Professional Response Generation**: Generates tailored, professional email responses using the Groq API.
+- **Streamlit Interface**: A user-friendly web interface to input email content, view categorization, see research, and generate responses in real-time.
 
-## Notes: This step is very import:
+## Project Structure
 
-### click below links to set two API_KEYs in the Environment Variable, and use this link as a reference.
+- **`src/`**: Contains the main application code
+  - `chains.py`: Logic for categorizing emails, conducting research, and generating responses.
+  - `config.py`: Configuration and environment variable loading.
+  - `processors.py`: Functions for processing emails, performing research, and drafting responses.
+  - `prompts.py`: Templates used for AI prompt generation.
+  - `state.py`: State management for the email processing workflow.
+  - `workflow.py`: Defines the workflow using state graphs for processing emails.
+- **`utils/`**: Utility functions for file operations and other helper tasks.
+- **`outputs/`**: Stores generated response files like email drafts and research info.
+- **`.env`**: Environment variables for API keys (Groq, Tavily).
 
-- [TAVILY_API_KEY](https://app.tavily.com/)  
-   $ TAVILY_API_KEY="Your-API-key"
+## Setup
 
-- [GROQ_API_KEY](https://console.groq.com/keys)  
-   $ GROQ_API_KEY="Your-API-key"
+1. Clone the repository
 
----
+   ```bash
+   git clone https://github.com/Bhavik-Jikadara/Email-Reply-System.git
+   cd Email-Reply-System/
+   ```
 
-### Step 1: Clone the repository
+2. Create a virtualenv (windows user)
 
-```
-    $ git clone https://github.com/Bhavik-Jikadara/Email-Reply-System.git
-    $ cd Email-Reply-System/
-```
+    ```bash
+    pip install virtualenv
+    virtualenv venv
+    
+    # windows users
+    source venv/Scripts/activate
+    
+    # mac users
+    source venv/bin/activate
+    ```
 
-### Step 2: Create a virtualenv (windows user)
+3. Install dependencies:
 
-```
-    $ pip install virtualenv
-    $ virtualenv venv
-    $ source venv/Scripts/activate
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Step 3: Rename of .env.example filename to .env file and add api keys
+4. Create a .env file with your API keys:
+   - [GROQ_API_KEY](https://console.groq.com/keys)
+   - [TAVILY_API_KEY](https://app.tavily.com/)
 
-```
-    $ GROQ_API_KEY=""
-    $ TAVILY_API_KEY=""
-```
+   ```bash
+   GROQ_API_KEY=your_groq_api_key
+   TAVILY_API_KEY=your_tavily_api_key
+   ```
 
-### Step 4: Install the requirements libraries using pip
+5. Run the Streamlit app:
 
-```
-    $ pip install -r requirements.txt
-```
+   ```bash
+   streamlit run app.py
+   ```
 
-### Step 5: Run the project:
+## Usage
 
-```
-    $ streamlit run app.py
-```
+1. Open the Streamlit app in your browser
+2. Enter the email content in the text area
+3. Click "Generate Response"
+4. View the generated professional response
+
+## License
+
+[MIT](LICENSE)

@@ -8,6 +8,7 @@ __pycache__/
 
 # Notebook folder remove
 notebook/
+outputs/
 
 # Distribution / packaging
 .Python

@@ -1,9 +1,7 @@
+streamlit
 langchain-groq
-duckduckgo-search
+langchain-core
 langchain-community
-tiktoken
-langchainhub
-langchain
-langgraph
-tavily-python
+typing-extensions
 python-dotenv
+langgraph
