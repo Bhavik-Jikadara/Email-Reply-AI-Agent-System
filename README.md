@@ -1,4 +1,4 @@
-# Email Response Generator
+# AI Email Reply Agent
 
 A Streamlit application that automatically processes and generates responses to customer emails using AI. The app uses [LangChain](https://python.langchain.com/) and [Groq](https://groq.com/) for natural language processing and understanding.
 
