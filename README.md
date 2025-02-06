@@ -27,8 +27,8 @@ A Streamlit application that automatically processes and generates responses to 
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/Bhavik-Jikadara/Email-Reply-System.git
-   cd Email-Reply-System/
+   git clone https://github.com/Bhavik-Jikadara/AI-Email-Reply-Agent.git
+   cd AI-Email-Reply-Agent
    ```
 
 2. Create a virtualenv (windows user)
