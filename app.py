@@ -153,10 +153,15 @@ def display_response_section(response, is_new=False):
 
 def main():
     st.set_page_config(
-        page_title="Email Response Generator",
+        page_title="AI ER Agent",
         page_icon="✉️",
         layout="wide",
-        initial_sidebar_state="collapsed"
+        initial_sidebar_state="collapsed",
+        menu_items={
+            'Get help': None,  # Remove help link
+            'Report a bug': None,  # Remove bug report link
+            'About': None  # Remove about link
+        }
     )
     
     initialize_session_state()
